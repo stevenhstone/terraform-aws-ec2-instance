@@ -13,6 +13,7 @@ locals {
     var.name != "" ? { "Name" = var.name } : {}
   )
 
+  # hello
   instance_id = try(
     aws_instance.this[0].id,
     aws_instance.ignore_ami[0].id,
